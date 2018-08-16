@@ -1,17 +1,392 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="São Geraldo">
+  <title>São Geraldo</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Elegant Font Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-font-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-line-icons.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- Venobox CSS -->
+        <link rel="stylesheet" href="css/venobox.css">
+		<!-- OWL-Carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- <link rel="stylesheet" href="css/color.css"> -->
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <link rel="stylesheet" href="css/custom.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body>
-<div>
-  <h1>Example</h1>
-  <p>Enter some text in the box and it will be turned into dash case using the {{dashcase}} helper.</p>
+<body data-spy="scroll" data-target="#navbar" data-offset="60">
+
+<script id="home-template" type="text/x-handlebars-template">
+  <div id='preloader' >
+      <div class='loader' >
+          <div class="cubes">
+              <div class="sk-cube sk-cube1"></div>
+              <div class="sk-cube sk-cube2"></div>
+              <div class="sk-cube sk-cube3"></div>
+              <div class="sk-cube sk-cube4"></div>
+              <div class="sk-cube sk-cube5"></div>
+              <div class="sk-cube sk-cube6"></div>
+              <div class="sk-cube sk-cube7"></div>
+              <div class="sk-cube sk-cube8"></div>
+              <div class="sk-cube sk-cube9"></div>
+          </div>
+      </div>
+  </div><!-- Preloader -->
+
+  <div id="up-bar"></div>
+
+  <header id="header" class="header_section">
+			<nav class="navbar">
+				<div class="container">
+					<div class="">
+                        <div data-wow-delay="1s" data-wow-duration="2s" class="wow fadeInLeft p-header row">
+                            <div class="col-md-2 col-md-offset-1">
+                                <a href="#"  class="brand">São Geraldo</a>
+                            </div>
+                            <div class="col-md-2">
+                                    <a href="" class="toggle-header"><img src="./img/lines.png" alt=""></a>
+                                    <a href="" class="toggle-header-x"><img src="./img/x-icon.png" alt=""></a>
+                                    <div class="menu-white">
+                                        <ul>
+                                            <br>
+                                            <li>Institucional</li>
+                                            <li>Espaço do arquiteto</li>
+                                            <li>Projetos</li>
+                                            <li>Amostras</li>
+                                            <li>Gaiolas</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            <div class="menu-white col-md-2">
+                                <ul>
+                                    <li>CATÁLOGO</li>
+                                    <br>
+                                    {{#each catalogo}}
+                                    <li><a class="sub-item" href="./catalog.html">{{nome}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <div class="menu-white col-md-3">
+                                <ul>
+                                    <li>CONTATO</li>
+                                    <br>
+                                    <li>SIA Trecho 03, n.790</li>
+                                    <li>Guará - Brasília, DF</li>
+                                    <li>71200-030</li>
+                                    <br>
+                                    <li>Segunda a Sexta: 8h30-18h</li>
+                                    <li>Sábado: 8h30-16h</li>
+                                    <br>
+                                    <li>T: 61 3233 4122 / 61 3031 4200</li>
+                                    <li>F: 61 3234 7021</li>
+                                    <li>E: sac@saogeraldo.com</li>
+                                </ul>
+                            </div>
+                            <div class="menu-white col-md-2">
+                                <ul>
+                                    <li>PESQUISAR</li>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <li>SIGA-NOS</li>
+                                    <br>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="#">Pinterest</a></li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</nav><!-- Navigation Bar -->
+  </header> <!-- Header -->
+
+
+  {{#with pagina.paginaGeral}}
+  <section id="home" data-jarallax-video={{video}} class="hero_section parallax">
+
+			<div class="container">
+				<div class="vertical-centered"
+					<div class="table-cell">
+						<div class="col-md-12">
+							<div style="padding: 0!important;" class="hero_content text-center">
+                                <div data-wow-delay="1s" data-wow-duration="2s" class="wow fadeIn text-wrap">
+                                    <p class="text-muted p-mute">{{titulo}}</p>
+                                    <h1 class="text">No estúdio</h1>
+                                    <h1 class="play"><i class="fa fa-play-circle"></i></h1>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+  </section><!-- /.hero_section -->
+  {{/with}}
+
+  <section id="sobre" class="new_section">
+        <div class="menu-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 text-center"><a data-scroll href="#studio-section">O estúdio</a></div>
+                    <div class="col-md-3 text-center"><a data-scroll href="#gaiola">Na gaiola</a></div>
+                    <div class="col-md-3 text-center"><a data-scroll href="#textures">A Casa Clara</a></div>
+                    <div class="col-md-3 text-center"><a data-scroll href="#other-projects">Outros destaques</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="display-table">
+                <div class="table-cell">
+                    <div class="col-md-11 col-md-offset-1">
+                        <div id="studio-section" class="hero_content">
+                            {{#with pagina.paginaGeral}}
+                            <p data-wow-delay="1s" data-wow-duration="2s" class="wow fadeInDown">
+                                {{{descricao}}}
+                            </p>
+                            {{/with}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.hero_section -->
+
+    {{#with pagina.paginaGeral}}
+    <section id="explore">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="p-explore">Explore o Vídeo</p>
+                    </div>
+                    {{#each items}}
+                    <div data-wow-duration="2s" class="wow fadeIn item-expo col-md-4">
+                         <a href="{{url}}"><img class="center-block img-responsive" src="{{itemUrl itemID}}" alt=""></a>
+                        <p class="text-center"><a href="{{url}}">{{nome}}</a></p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+    </section>
+    {{/with}}
+
+    {{#with pagina.paginaDocumental}}
+    <section id="documental">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                   
+                    <img data-wow-duration="2s" id="image1" width="400" class="wow fadeInLeft img-responsive" src="{{imagemUrl imagens.0.paginaImagemID}}" alt="">
+                    <img id="image2" width="400" class="img-responsive" src="{{imagemUrl imagens.1.paginaImagemID}}" alt="">
+                </div>
+                <div class="col-md-5">
+                    <span class="title">Documental</span>
+                    <p class="description">
+                        {{titulo}}
+                    </p>
+                    <div class="quote-wrap">
+                        {{{descricao}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/with}}
+
+    {{#with pagina.paginaGaiola}}
+    <section id="gaiola">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="title">
+                        Na Gaiola
+                    </span>
+                    <div data-wow-duration="2s" class="wow fadeIn box">
+                        <h1>{{titulo}}</h1>
+                        <p>
+                            {{{descricao}}}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div data-wow-duration="2s" class="wow fadeInRight" id="gaiola-carousel">
+                        {{#each imagens}}
+                        <div class="item">
+                            <img width="500" class="pull-right" src="{{imagemUrl paginaImagemID}}" alt="">
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/with}}
+
+
+    {{#with pagina.paginaGaiola}}
+    <section id="explore" class="second">
+        <div class="container">
+            <div class="row">
+                    {{#each items}}
+                    <div data-wow-duration="2s" class="wow fadeIn item-expo col-md-4">
+                         <a href="{{url}}"><img class="center-block img-responsive" src="{{itemUrl itemID}}" alt=""></a>
+                        <p class="text-center"><a href="{{url}}">{{nome}}</a></p>
+                    </div>
+                    {{/each}}
+            </div>
+        </div>
+    </section>
+    {{/with}}
+
+    {{#with pagina.paginaStudio}}
+    <section id="textures">
+        <!-- <h2 style="padding-top: 200px" class="text-center">Componente de texturas</h2> -->
+        <ul class="results">
+            <li class="layer0">
+                    <div class="texture-item" style="z-index: 110; position: absolute; left: 30%; top: 65px; width: 300px; height: 350px; background: #fff ;margin-left: -150px;" data-index="1">
+                        <h4 class="text-center">{{titulo}}</h4>
+                        <p>{{{descricao}}}</p>
+                    </div>
+            </li>
+            <li class="layer1">
+                    <img class="texture-item" data-index="2" style="z-index: 100; position: absolute; left: 50%; top: 25px; width: 300px; margin-left: -150px;" src="./img/layer1.png" />
+            </li>
+            <li class="layer2">
+                    <img class="texture-item" data-index="3" style="z-index: 90; position: absolute; left: 50%; width: 600px; margin-left: -300px;" src="./img/layer2.png" />
+            </li>
+            <li class="layer3">
+                    <img class="texture-item" data-index="4" style="z-index: 80; position: absolute; left: 55%; top: 45px; width: 600px; margin-left: -300px;" src="./img/layer3.png" />
+            </li>
+            <li class="layer4">
+                    <img class="texture-item" data-index="5" style="z-index: 70; position: absolute; left: 50%; top: -24px; width: 360px; margin-left: -130px;" src="./img/layer4.png" />
+            </li>
+        </ul>
+        <div class="controls">
+            <span data-index="1" class="active"></span>
+            <span data-index="2"></span>
+            <span data-index="3"></span>
+            <span data-index="4"></span>
+            <span data-index="5"></span>
+        </div>
+    </section>
+    {{/with}}
+
+    {{#with pagina.paginaStudio}}
+    <section id="explore" class="third">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="p-explore">Explore {{titulo}}</p>
+                </div>
+                {{#each items}}
+                    <div data-wow-duration="2s" class="wow fadeIn item-expo col-md-4">
+                            <a href="{{url}}"><img class="center-block img-responsive" src="{{itemUrl itemID}}" alt=""></a>
+                        <p class="text-center"><a href="{{url}}">{{nome}}</a></p>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+    {{/with}}
+
+    <section id="studio">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p id="other-projects" class="p-explore">No estúdio com</p>
+                </div>
+                <!-- <div id="studio-carousel">
+                    <div class="item item-expo">
+                        <img class="center-block img-responsive" src="./img/exp-1.png" alt="">
+                    </div>
+                    <div class="item item-expo">
+                        <img class="center-block img-responsive" src="./img/exp-2.png" alt="">
+                    </div>
+                    <div class="item item-expo">
+                        <img class="center-block img-responsive" src="./img/exp-3.png" alt="">
+                    </div>
+                </div> -->
+            </div>
+            <div id="studio-carousel" class="owl-carousel owl-theme">
+                {{#each paginas}}
+                    <div class="item">
+                        <img class="center-block img-responsive" src="{{imagemUrl paginaGeral.imagens.0.paginaImagemID}}" alt="">
+                        <div class="overlay">
+                            <div class="text-center">{{paginaGeral.titulo}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <div class="newsletter">
+            <p class="text-center">Assine nosso newsletter</p>
+            <input class="center-block" type="text">
+            <p class="text-center"><a href="">Enviar</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <span class="">
+                    Todos os direitos reservados &copy; São Geraldo
+                </span>
+                <span class="pull-right">
+                    design&#9670;conteúdo manufatura.org <br> desenvolvimento happe.mobi
+                </span>
+            </div>
+        </div>
+    </footer><!-- /.footer_section -->
+
+</script>
+<div id="app">
+
 </div>
-<div><input type="text" name="name" id="name" placeholder="Enter an application name..."></div>
-<div id="content"></div>
+<!-- jQuery Lib -->
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<!-- waypoints js -->
+<script src="js/vendor/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/vendor/bootstrap.min.js"></script>
+<!-- OWL-Carousel JS -->
+<script src="js/vendor/owl.carousel.min.js"></script>
+<!-- Smooth Scroll JS -->
+<script src="js/vendor/smooth-scroll.min.js"></script>
+<!-- venobox JS -->
+<script src="js/vendor/venobox.min.js"></script>
+<!-- Counterup JS -->
+<script src="js/vendor/jquery.counterup.min.js"></script>
+<!-- Ajaxchimp JS -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+
+<script src="js/vendor/jquery.ajaxchimp.min.js"></script>
+<!-- wow JS -->
+<script src="js/vendor/wow.min.js"></script>
+
+<script src="js/vendor/jquery.topzindex.min.js"></script>
+<script src="js/vendor/jarallax.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-<script src="./app.js"></script>
+<script src="./js/vendor/handlebars-helpers.js"></script>
+<script src="./js/templates/index.js"></script>
 </body>
 </html>
